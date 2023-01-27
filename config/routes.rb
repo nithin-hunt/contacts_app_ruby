@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  resources :contacts
   devise_for :users
-  resources :friends
   get 'home/about'
-  root "home#index"
+  # root "home#index"
+  root 'contacts#index'
 end

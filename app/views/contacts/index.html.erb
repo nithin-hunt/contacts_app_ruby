@@ -1,0 +1,29 @@
+<% if user_signed_in? %>
+  <table class="table table-striped table-hover table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Twitter</th>
+        <th></th>
+      </tr>
+    </thead>  
+    <tbody>
+      <div id="contacts">
+        <% @contacts.each do |contact| %>
+          <% if contact.user == current_user %>
+          <tr>
+            <%= render contact %>
+          </tr>
+          <% end %>
+        <% end %>
+      </div>
+    </tbody>
+  </table> 
+
+  <%= link_to "New contact", new_contact_path, class:"btn btn-secondary" %>
+<% else %>
+  <h1>Hello!</h1>
+<% end %>
+  

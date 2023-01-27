@@ -1,11 +1,12 @@
-class CreateFriends < ActiveRecord::Migration[7.0]
+class CreateContacts < ActiveRecord::Migration[7.0]
   def change
-    create_table :friends do |t|
+    create_table :contacts do |t|
       t.string :first_name
       t.string :last_name
       t.string :email
       t.string :phone
       t.string :twitter
+      t.integer :user_id
 
       t.timestamps
     end
