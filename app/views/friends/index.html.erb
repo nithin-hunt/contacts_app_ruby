@@ -14,12 +14,14 @@
   <tbody>
     <div id="friends">
       <% @friends.each do |friend| %>
+        <% if friend.user == current_user %>
         <tr>
           <%= render friend %>  
           <td>
             <%= link_to "Show", friend %>
           </td>
         </tr>
+        <% end %>
       <% end %>
     </div>
   </tbody>
