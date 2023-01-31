@@ -3,6 +3,6 @@
 Hello. I'm Nithin
 
 This is my first project in Ruby on Rails
-This is a contact app.
+Basic CRUD operations using Sqlite
 
 For more projects, visit www.nithinravi.com
